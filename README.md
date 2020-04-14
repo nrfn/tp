@@ -1,24 +1,6 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# アプリ名 TonePlay
+## 概要
+このアプリはWEBブラウザで遊べるピアノアプリです。
+主な機能は二つあります。
+① 鍵盤に書いてあるキーを押すとその音がでます。（鍵盤右下のスイッチをクリックでON/OFFの切り替え）
+② 黒板に文字を入力してPLAYボタンを押すと音が出ます。(入力する文字は【SOUND CODE】や【SUMPLEMELODY】を参考にして下さい。)
