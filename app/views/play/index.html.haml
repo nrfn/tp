@@ -3,132 +3,146 @@
     %ul
       %li
         %span#c_4.wk
-          .code_box
-            .white_code Q
+          .white_code Q
       %li
         %span#c_s_4.bk
-          .code_box
-            .black_code 2
+          .black_code 2
         %span#d_4.wk
-          .code_box
-            .white_code W
+          .white_code W
       %li
         %span#d_s_4.bk
-          .code_box
-            .black_code 3
+          .black_code 3
         %span#e_4.wk
-          .code_box
-            .white_code E
+          .white_code E
       %li
         %span#f_4.wk
-          .code_box
-            .white_code R
+          .white_code R
       %li
         %span#f_s_4.bk
-          .code_box
-            .black_code 5
+          .black_code 5
         %span#g_4.wk
-          .code_box
-            .white_code T
+          .white_code T
       %li
         %span#g_s_4.bk
-          .code_box
-            .black_code 6
+          .black_code 6
         %span#a_4.wk
-          .code_box
-            .white_code Y
+          .white_code Y
       %li
         %span#a_s_4.bk
-          .code_box
-            .black_code 7
+          .black_code 7
         %span#b_4.wk
-          .code_box
-            .white_code U
-
+          .white_code U
       %li
         %span#c_5.wk
-          .code_box
-            .white_code I
+          .white_code I
       %li
         %span#c_s_5.bk
-          .code_box
-            .black_code 9
+          .black_code 9
         %span#d_5.wk
-          .code_box
-            .white_code O
+          .white_code O
       %li
         %span#d_s_5.bk
-          .code_box
-            .black_code 0
+          .black_code 0
         %span#e_5.wk
-          .code_box
-            .white_code P
+          .white_code P
       %li
         %span#f_5.wk
-          .code_box
-            .white_code Z
+          .white_code Z
       %li
         %span#f_s_5.bk
-          .code_box
-            .black_code S
+          .black_code S
         %span#g_5.wk
-          .code_box
-            .white_code X
+          .white_code X
       %li
         %span#g_s_5.bk
-          .code_box
-            .black_code D
+          .black_code D
         %span#a_5.wk
-          .code_box
-            .white_code C
+          .white_code C
       %li
         %span#a_s_5.bk
-          .code_box
-            .black_code F
+          .black_code F
         %span#b_5.wk
-          .code_box
-            .white_code V
-
+          .white_code V
       %li
         %span#c_6.wk
-          .code_box
-            .white_code B
+          .white_code B
       %li
         %span#c_s_6.bk
-          .code_box
-            .black_code H
+          .black_code H
         %span#d_6.wk
-          .code_box
-            .white_code N
+          .white_code N
       %li
         %span#d_s_6.bk
-          .code_box
-            .black_code J
+          .black_code J
         %span#e_6.wk
-          .code_box
-            .white_code M
+          .white_code M
 
 .switch
   %input#switch{:type => "checkbox"}
   %label{:for => "switch"}
 
 .c-2
-  .code-list
-    ド  : c4 < c5 < c6 <br>
-    レ  : d4 < d5 < d6 <br>
-    ミ  : e4 < e5 < e6 <br>
-    ﾌｧ : f4 < f5 <br>
-    ソ  : g4 < g5 <br>
-    ラ  : a4 < a5 <br>
-    シ  : b4 < b5 <br>
-    (#) : 大文字で半音上げる<br>
-    (-) : 休符
+  .cork
+    %table.code-list
+      %tr
+        %th SOUND CODE
+      %tr
+        %td.sound ド
+        %td :
+        %td.code c4
+        %td.code c5
+        %td.code c6
+      %tr
+        %td.sound レ
+        %td :
+        %td.code d4
+        %td.code d5
+        %td.code d6
+      %tr
+        %td.sound ミ
+        %td :
+        %td.code e4
+        %td.code e5
+        %td.code e6
+      %tr
+        %td.sound ファ
+        %td :
+        %td.code f4
+        %td.code f5
+        %td.code f6
+      %tr
+        %td.sound ソ
+        %td :
+        %td.code g4
+        %td.code g5
+      %tr
+        %td.sound ラ
+        %td :
+        %td.code a4
+        %td.code a5
+      %tr
+        %td.sound シ
+        %td :
+        %td.code b4
+        %td.code b5
+      %tr
+        %td.sound #
+        %td :
+        %td.code C D E F G A B
+      %tr
+        %td.sound -
+        %td :
+        %td.code 間を開ける
+
   .play-box
-    %textarea#score
-    %button#play play
-  .sample-melody
-    sample <br>
-    ド ファ - ファ ファ - ラ ソ - ファ ソ - <br>
-    ラ ファ ファ ラ c6 d6 - d6 <br>
-    c6  - ラ ラ - ファ ソ - ファ ソ - <br>
-    ラ ファ - レ レ - ド ファ
+    .black_boad
+      %textarea{id: "score", placeholder: "SOUND CODEを書き込んでPLAYボタンをクリック！"}
+    %button#play PLAY
+
+  .melody-note
+    .sample-melody
+      %b SAMPLE MELODY <br>
+      ド ファ - ファ ファ - ラ ソ - ファ <br>
+      ソ - ラ ファ ファ ラ c6 d6 - d6 <br>
+      c6 - ラ ラ - ファ ソ - ファ ソ - <br>
+      ラ ファ - レ レ - ド ファ
